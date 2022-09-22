@@ -1,6 +1,6 @@
 .header {
-  position: relative;
-  padding: 28px 50px;
+  // position: relative;
+  padding: 29px clamp(24px, 7.5vw, 50px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,14 +19,16 @@
   }
 
   &__logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     transition: all 0.4s ease;
 
     &:hover {
-      transform: translate(-50%, -50%) scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+
+  &__join {
+    @media screen and (max-width: 576px) {
+      display: none;
     }
   }
 }
