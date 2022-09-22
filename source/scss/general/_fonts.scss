@@ -9,7 +9,9 @@
   }
 }
 
-@include font-face("OpenSans", "../fonts/OpenSans-Regular", 400, normal);
+@include font-face("Poppins", "../fonts/Poppins-Regular", 400, normal);
+@include font-face("Poppins", "../fonts/Poppins-Medium", 500, normal);
+@include font-face("Poppins", "../fonts/Poppins-ExtraBold", 800, normal);
 
 
 
