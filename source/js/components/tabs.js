@@ -1,12 +1,7 @@
-// tabs
-
 const tabsParrents = [...document?.querySelectorAll('.tabs')];
-const tabsParrentsInner = [...document?.querySelectorAll('.tabs__inner')];
 
 let tabBtn = 'tabs-btn', // default btn
-    tabContent = 'tabs-content', // default content
-    innerTabBtn = 'inner-btn',
-    innerTabContent = 'inner-content';
+    tabContent = 'tabs-content'; // default content
 
 function tabsInit(tabsParrentItem, btns, contents) {
   tabsParrentItem.map(function(tabsParr) {
@@ -18,11 +13,6 @@ function tabsInit(tabsParrentItem, btns, contents) {
         for (const button of tabsBtn) {
           button.addEventListener('click', function () {
             const tabsPath = this.getAttribute(`${btns}`);
-
-            tabsPath == 'confectioner-products' ?
-            document.querySelector('.details__aside')?.classList.add('active') :
-            document.querySelector('.details__aside')?.classList.remove('active');
-
 
             tabsBtn.forEach(el => {el.classList.remove('active')});
             tabsParr.querySelector(`[${btns}="${tabsPath}"]`).classList.add('active');
@@ -40,4 +30,3 @@ function tabsInit(tabsParrentItem, btns, contents) {
 }
 
 tabsInit(tabsParrents, tabBtn, tabContent);
-tabsInit(tabsParrentsInner, innerTabBtn, innerTabContent);

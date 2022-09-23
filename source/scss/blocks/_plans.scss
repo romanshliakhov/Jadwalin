@@ -4,7 +4,6 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    // grid-gap: 90px;
     grid-gap: clamp(32px, 10vw, 90px);
   }
 
@@ -54,6 +53,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: var(--font-family-poppins);
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: 0.833333px;
+    color: var(--color-blue-text);
     transition: all 0.4s ease;
     cursor: pointer;
 
@@ -69,13 +74,58 @@
     padding: 40px 68px;
     background-color: rgba(255, 255, 255, 0.64);
     border-radius: 26px;
+
+    @media screen and (max-width: 768px) {
+      padding: 32px 28px 28px;
+    }
   }
 
   &__pricelist {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    // display: flex;
-    // align-items: stretch;
-    grid-gap: 60px;
+    &.active {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 52px;
+
+      @media screen and (max-width: 991px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 100px 52px;
+      }
+
+      @media screen and (max-width: 576px) {
+        grid-template-columns: 100%;
+        grid-gap: 48px;
+      }
+    }
+  }
+
+  &__pricelist-item:last-child {
+    position: relative;
+
+    @media screen and (max-width: 991px) {
+      grid-column: span 2;
+    }
+
+    @media screen and (max-width: 576px) {
+      grid-column: initial;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      right: -30px;
+      bottom: -20px;
+      left: -30px;
+      background-color: var(--color-blue);
+      box-shadow: 0px 42px 34px rgba(82, 67, 194, 0.295755);
+      border-radius: 26px;
+
+      @media screen and (max-width: 768px) {
+        top: -16%;
+        right: -3%;
+        left: -3%;
+        bottom: -5%;
+      }
+    }
   }
 }

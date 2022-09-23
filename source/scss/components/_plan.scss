@@ -1,3 +1,139 @@
 .plan {
+  position: relative;
+  min-height: 387px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
 
+  @media screen and (max-width: 576px) {
+    min-height: 342px;
+  }
+
+  &__popular {
+    position: absolute;
+    top: -47px;
+    right: 0;
+    padding: 6px 17px;
+    background-color: var(--color-popular-bg);
+    border-radius: 13.5px;
+    font-family: var(--font-family-poppins);
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 800;
+    letter-spacing: 0.833333px;
+    color: var(--color-purple);
+    text-transform: uppercase;
+
+    @media screen and (max-width: 576px) {
+      position: relative;
+      margin: 0 auto;
+      top: initial;
+    }
+  }
+
+  &__pricing {
+    display: flex;
+    align-items: baseline;
+    grid-gap: 4px;
+  }
+
+  &__price {
+    font-family: var(--font-family-poppins);
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: 700;
+    color: var(--color-blue);
+
+    &.popular {
+      color: var(--color-white);
+    }
+  }
+
+  &__option {
+    margin-bottom: 6px;
+    font-family: var(--font-family-poppins);
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 500;
+    color: var(--color-blue);
+
+    &.popular {
+      color: var(--color-white);
+    }
+  }
+
+  &__description {
+    font-family: var(--font-family-poppins);
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+    color: var(--color-grey-text);
+
+    &.popular {
+      color: var(--color-white);
+    }
+  }
+
+  &__duration {
+    font-family: var(--font-family-poppins);
+    font-size: 17px;
+    line-height: 26px;
+    font-weight: 500;
+    color: var(--color-grey-text);
+
+    &.popular {
+      color: var(--color-white);
+    }
+  }
+
+  &__details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 8px;
+  }
+
+  &__details-item {
+    position: relative;
+    padding-left: 30px;
+    font-family: var(--font-family-poppins);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--color-grey-text);
+
+    &.popular {
+      color: var(--color-white);
+
+      &::before {
+        background-image: var(--plan-popular);
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-image: var(--plan-default);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__choose-btn {
+    padding: 11px 55px;
+    background-color: var(--color-blue);
+    border-radius: 24px;
+    font-family: var(--font-family-poppins);
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+    color: var(--color-white);
+
+    &.popular {
+      width: 100%;
+      background-color: var(--color-purple);
+    }
+  }
 }

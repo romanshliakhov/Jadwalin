@@ -9,28 +9,30 @@
       <main class="main">
         <section class="plans">
           <div class="container">
-            <div class="plans__wrapper">
+            <div class="plans__wrapper tabs">
               <div class="plans__head">
                 <h1 class="plans__title title">Plans & Pricing</h1>
 
-                <p class="plans__description">Whether your time-saving automation needs are large or small, we’re here to help you scale.</p>
+                <p class="plans__description description">Whether your time-saving automation needs are large or small, we’re here to help you scale.</p>
 
                 <div class="plans__tabs">
-                  <div class="plans__tabs-btn active">MONTHLY</div>
-                  <div class="plans__tabs-btn">YEARLY</div>
+                  <div class="plans__tabs-btn tablinks active" tabs-btn="mountly">MONTHLY</div>
+                  <div class="plans__tabs-btn tablinks" tabs-btn="yearly">YEARLY</div>
                 </div>
               </div>
 
               <div class="plans__content">
-                <ul class="plans__pricelist">
+                <ul class="plans__pricelist tabcontent active" tabs-content="mountly">
                   <li class="plans__pricelist-item">
                     <div class="plan">
                       <div class="plan__pricing">
-                        <span class="plan__price">$19</span>
+                        <span class="plan__price title">$19</span>
                         <span class="plan__duration">/month</span>
                       </div>
-                      <div class="plan__option">Starter</div>
-                      <p class="plan__description">Unleash the power of automation.</p>
+                      <div class="plan__text">
+                        <div class="plan__option">Starter</div>
+                        <p class="plan__description">Unleash the power of automation.</p>
+                      </div>
                       <ul class="plan__details">
                         <li class="plan__details-item">Multi-step Zaps</li>
                         <li class="plan__details-item">3 Premium Apps</li>
@@ -45,8 +47,10 @@
                         <span class="plan__price">$54</span>
                         <span class="plan__duration">/month</span>
                       </div>
-                      <div class="plan__option">Professional</div>
-                      <p class="plan__description">Advanced tools to take your work to the next level.</p>
+                      <div class="plan__text">
+                        <div class="plan__option">Professional</div>
+                        <p class="plan__description">Advanced tools to take your work to the next level.</p>
+                      </div>
                       <ul class="plan__details">
                         <li class="plan__details-item">Multi-step Zaps</li>
                         <li class="plan__details-item">Unlimited Premium </li>
@@ -58,20 +62,84 @@
                   </li>
                   <li class="plans__pricelist-item">
                     <div class="plan">
+                      <div class="plan__popular">most popular</div>
                       <div class="plan__pricing">
-                        <span class="plan__price">$89</span>
+                        <span class="plan__price popular">$89</span>
+                        <span class="plan__duration popular">/month</span>
+                      </div>
+                      <div class="plan__text">
+                        <div class="plan__option popular">Company</div>
+                        <p class="plan__description popular">Automation plus enterprise-grade features.</p>
+                      </div>
+                      <ul class="plan__details">
+                        <li class="plan__details-item popular">Multi-step Zaps</li>
+                        <li class="plan__details-item popular">Unlimited Premium</li>
+                        <li class="plan__details-item popular">Unlimited Users Team</li>
+                        <li class="plan__details-item popular">Advanced Admin</li>
+                        <li class="plan__details-item popular">Custom Data Retention</li>
+                      </ul>
+                      <button class="plan__choose-btn popular">Choose plan</button>
+                    </div>
+                  </li>
+                </ul>
+
+                <ul class="plans__pricelist tabcontent" tabs-content="yearly">
+                  <li class="plans__pricelist-item">
+                    <div class="plan">
+                      <div class="plan__pricing">
+                        <span class="plan__price">$12</span>
                         <span class="plan__duration">/month</span>
                       </div>
-                      <div class="plan__option">Company</div>
-                      <p class="plan__description">Automation plus enterprise-grade features.</p>
+                      <div class="plan__text">
+                        <div class="plan__option">Starter</div>
+                        <p class="plan__description">Unleash the power of automation.</p>
+                      </div>
                       <ul class="plan__details">
                         <li class="plan__details-item">Multi-step Zaps</li>
-                        <li class="plan__details-item">Unlimited Premium</li>
-                        <li class="plan__details-item">Unlimited Users Team</li>
-                        <li class="plan__details-item">Advanced Admin</li>
-                        <li class="plan__details-item">Custom Data Retention</li>
+                        <li class="plan__details-item">3 Premium Apps</li>
+                        <li class="plan__details-item">2 Users team</li>
                       </ul>
                       <button class="plan__choose-btn">Choose plan</button>
+                    </div>
+                  </li>
+                  <li class="plans__pricelist-item">
+                    <div class="plan">
+                      <div class="plan__pricing">
+                        <span class="plan__price">$36</span>
+                        <span class="plan__duration">/month</span>
+                      </div>
+                      <div class="plan__text">
+                        <div class="plan__option">Professional</div>
+                        <p class="plan__description">Advanced tools to take your work to the next level.</p>
+                      </div>
+                      <ul class="plan__details">
+                        <li class="plan__details-item">Multi-step Zaps</li>
+                        <li class="plan__details-item">Unlimited Premium </li>
+                        <li class="plan__details-item">50 Users team</li>
+                        <li class="plan__details-item">Shared Workspace</li>
+                      </ul>
+                      <button class="plan__choose-btn">Choose plan</button>
+                    </div>
+                  </li>
+                  <li class="plans__pricelist-item">
+                    <div class="plan">
+                      <div class="plan__popular">most popular</div>
+                      <div class="plan__pricing">
+                        <span class="plan__price popular">$56</span>
+                        <span class="plan__duration popular">/month</span>
+                      </div>
+                      <div class="plan__text">
+                        <div class="plan__option popular">Company</div>
+                        <p class="plan__description popular">Automation plus enterprise-grade features.</p>
+                      </div>
+                      <ul class="plan__details">
+                        <li class="plan__details-item popular">Multi-step Zaps</li>
+                        <li class="plan__details-item popular">Unlimited Premium</li>
+                        <li class="plan__details-item popular">Unlimited Users Team</li>
+                        <li class="plan__details-item popular">Advanced Admin</li>
+                        <li class="plan__details-item popular">Custom Data Retention</li>
+                      </ul>
+                      <button class="plan__choose-btn popular">Choose plan</button>
                     </div>
                   </li>
                 </ul>
