@@ -61,12 +61,21 @@
     color: var(--color-blue-text);
     transition: all 0.4s ease;
     cursor: pointer;
+    transition: all 0.4s ease;
 
     &.active {
       background-color: var(--color-purple);
       box-shadow: 0px 6px 12px rgba(82, 67, 194, 0.16);
       border-radius: 22px;
       color: var(--color-white);
+
+      &:hover {
+        color: var(--color-white);
+      }
+    }
+
+    &:hover {
+      color: var(--color-purple-hover);
     }
   }
 
@@ -114,16 +123,19 @@
       position: absolute;
       top: -60px;
       right: -30px;
-      bottom: -20px;
+      bottom: -5%;
       left: -30px;
       background-color: var(--color-blue);
       box-shadow: 0px 42px 34px rgba(82, 67, 194, 0.295755);
       border-radius: 26px;
 
       @media screen and (max-width: 768px) {
-        top: -16%;
-        right: -3%;
-        left: -3%;
+        right: -20px;
+        left: -20px;
+      }
+
+      @media screen and (max-width: 576px) {
+        top: 0;
         bottom: -5%;
       }
     }
